@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* Site background color and text font */
+html {
+    font-family: "Source Sans Pro", serif;
+}
+
+/* About text */
+#about-us {
+    float: right;
+    transform: translate(-15px, -5px);
+}
+
+/* Show all link */
+#show-all-apps {
+    float: left;
+    color: blue;
+    text-decoration: none;
+    transform: translate(280px, -75px);
+}
+#show-all-apps:hover { text-decoration: underline; }
+
+/* Underline links only when hovered over */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Space the app shortcuts */
+.app-icons {
+    float: left;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+
+/* Always position the close button in the same place */
+.close-button {
+    float: right;
+    transform: translate(25px, -25px);
+}
+
+/* Border of all apps */
+.app-border {
+    border-style: solid;
+    border-color: white;
+    border-width: 20px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+/* Size of YouTube "app" */
+#yt-app {
+    position: relative;
+    background-color: white;
+    width: 403px;
+    height: 310px;
+    top: 20px;
+    padding: 0.5em;
+    visibility: hidden;
+}
+
+
+/* YouTube text */
+#yt-app p {
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    color: red;
+}
+
+/* Center the input box */
+#yt-app form { transform: translateX(100px); }
+
+/* Make input fields blend in with the background */
+input { border: 1px solid silver; }
+
+/* Size of Google Search "app" */
+#google-app {
+    position: relative;
+    background-color: white;
+    width: 350px;
+    height: 200px;
+    padding: 0.5em;
+    transform: translate(550px, -300px);
+    visibility: hidden;
+}
+
+/* Size and initial location of Scriber "app" */
+#scriber-app {
+    width: 400px;
+    height: 400px;
+    transform: translate(550px, -250px);
+    visibility: hidden;
+}
+
+/* Remove iframe border, place it inside the border */
+#scriber-app iframe {
+    border: none;
+    transform: translateY(-25px);
+}
+
+/* Overwrite global location of close button, make the close button overlay the iframe */
+#scriber-app img {
+    transform: translate(20px, -20px);
+    z-index: 2;
+}
+
+/* Size and initial location of Tasker "app" */
+#tasker-app {
+    width: 350px;
+    height: 200px;
+    padding: 0.5em;
+    background-color: white;
+    transform: translateY(-580px);
+    visibility: hidden;
+}
+
+/* Tasker text */
+#tasker-app p {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+

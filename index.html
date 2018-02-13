@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body style="overflow: hidden">
+<body background='background.jpg'>
+    <meta charset="utf-8">
+    <title>Sunrise Desktop</title>
+    <!-- Pull in our styling -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Import the Source Sans Pro font from Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet" type="text/css" data-noprefix />
+</head>
+
+<body>
+    <!-- Installed apps shortcuts -->
+    <!-- YouTube -->
+    <img class="app-icons" onclick="showApp('yt-app');" alt="YouTube"
+         title="YouTube" height="55" width="55" src="img/youtube.png" />
+    <!-- Google Search -->
+    <img class="app-icons" onclick="showApp('google-app');" alt="Google Search"
+         title="Google Search" height="55" width="55" src="img/google1.png" />
+    <!-- Scriber -->
+    <img class="app-icons" onclick="showApp('scriber-app');" alt="Scriber"
+         title="Scriber" src="img/news.png" height="55" width="55"/>
+    <!-- Tasker -->
+    <img class="app-icons" onclick="showApp('tasker-app');" alt="Tasker"
+         title="Tasker" src="img/files2.png" height="55" width="55" />
+
+    <!-- Product name, build number, and creator -->
+    <p id="about-us">Sunrise Desktop build 37 - (c) 2014 LuukGames</p><br>
+    <br><br><br>
+    <!-- Show all windows button -->
+    <div id="show-all-apps" onclick="showAll(['yt-app', 'google-app', 'scriber-app', 'tasker-app']);">?</div>
+
+    <!-- YouTube application -->
+    <div class="drag app-border" id="yt-app">
+        <!-- Close button -->
+        <img class="close-button" src="img/close.png" alt="Close" height="20" width="20" onclick="document.getElementById('yt-app').style.height = '310px'; document.getElementById('yt-app').style.width = '403px'; hideApp('yt-app');" />
+        <div>
+    <!-- Max button -->
+        <img class="close-button" src="img/max.png" alt="Close" height="20" width="20" onclick="document.getElementById('yt-app').style.height = '800px'; document.getElementById('yt-app').style.width = '800px';" />
+            <p>YouTube</p>
+            <form action="http://www.youtube.com/results" method="get" target="_blank">
+            <input name="search_query" type="text">
+            <input value="Search" type="submit">
+            </form>
+        </div>
+    </div>
+
+    <!-- Google Search application -->
+    <div class="drag app-border" id="google-app">
+        <!-- Close button -->
+        <img class="close-button" src="img/close.png" alt="Close" height="20" width="20" onclick="hideApp('google-app');" />
+        <form action="http://google.com/search" target="_blank">
+            <!-- The `name` attribute must be "q" for the search to run successfully -->
+            <input name="q" type="text">
+            <input type="submit">
+        </form>
+    </div>
+
+     <!-- Scriber application -->
+    <div class="drag app-border" id="scriber-app">
+        <!-- Close button -->
+        <img class="close-button" src="img/close.png" alt="Close" height="20" width="20" onclick="hideApp('scriber-app');" />
+    <!-- Max button -->
+        <img class="close-button" src="img/max.png" alt="Close" height="20" width="20" onclick="document.getElementById('yt-app').style.height = '800px'; document.getElementById('scriber-app').style.width = '800px';" />
+    <br>
+    <iframe src="test.html" width="400" height="400" frameborder="0"></iframe>
+    </div>
+
+    <!-- Tasker application -->
+    <div class="drag app-border" id="tasker-app">
+        <!-- Close button -->
+        <img class="close-button" src="img/close.png" alt="Close" height="20" width="20" onclick="hideApp('tasker-app');" />
+        <p>Tasker</p>
+        <ul>
+            <li><a style="color: black;" onclick="hideAll(['yt-app', 'google-app', 'scriber-app', 'tasker-app']);">Close all windows</a></li>
+        </ul>
+    </div>
+    <br><br>
+
+    <!-- Grab the -prefix-free library from http://leaverou.github.io/prefixfree/ -->
+    <script async src="http://leaverou.github.io/prefixfree/prefixfree.min.js"></script>
+
+    <!-- Pull in jQuery, jQuery UI, and our own JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

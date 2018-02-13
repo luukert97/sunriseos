@@ -1,8 +1,9 @@
-sunriseos
-=========
+# README #
 
-A OS that runs in the browser and connects multiple services.
+This is SunriseOS, a OS that runs in the browser using modern web technologies.
+Currently this includes:
 
-In private Alpha now, source will be available shortly.
+- Window Manager
+- Basic (web) apps
+- Friendly UI
 
-![alt text](http://i335676.iris.fhict.nl/sunrise_2.png)
